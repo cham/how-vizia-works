@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A simple scene</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="highlight.min.css">
+    <style>
+    html {
+        height: 100%;
+        font-family: sans-serif;
+    }
+    h2 {
+        font-size: 2em;
+        font-weight: normal;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+        font-size: 1.6em;
+        font-family: Roboto, sans-serif;
+    }
+    iframe , section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 0;
+        z-index: 0;
+    }
+    section {
+        display: none;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    ul ol li {
+        list-style-type: decimal;
+    }
+    .content {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #333;
+        color: #fff;
+        display: none;
+    }
+    .transitionable {
+        transition: left 0.65s ease-in-out;
+    }
+    .subsection {
+        padding: 12px;
+        display: none;
+    }
+    .content .subsection:first-of-type {
+        display: block;
+    }
+    .centered-content {
+        right: 0;
+        bottom: 0;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+    }
+    .centered-content .subsection {
+        margin: 0 auto;
+        width: 450px;
+    }
+    .vertcenter {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .intro, .coloured-slide {
+        background: #f66;
+    }
+    .altcolour {
+        background: #66f;
+    }
+    .intro {
+        font-family: Roboto, serif;
+        font-weight: 300;
+        height: 100%;
+        text-align: center;
+    }
+    .intro h2 {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+    }
+    .intro h3 {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+    }
+    .always-invisible {
+        visibility: hidden;
+        padding: 0;
+    }
+    a {
+        color: #fff;
+    }
+    </style>
+  </head>
+  <body>
+
+    <section class="intro">
+        <h2>How Vizia Works</h2>
+        <h3>Dan Neame</h3>
+    </section>
+
+    <section class="intro">
+        <h2>Magic!</h2>
+    </section>
+
+    <section class="intro">
+        <h2>A lot of things working together</h2>
+    </section>
+    <section class="coloured-slide">
+        <div class="content centered-content" style="display:table">
+          <div class="vertcenter">
+            <div class="subsection">
+                <h2>Each of these things have things</h2>
+                <ol>
+                    <li>The Vizia Services</li>
+                    <li>Servers</li>
+                    <li>Datavis Tech</li>
+                    <li>Culture</li>
+                </ol>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="intro altcolour">
+        <h2>The Vizia Services</h2>
+    </section>
+    <section class="intro altcolour">
+        <h2>A lot of small apps working together</h2>
+    </section>
+    <section style="background: #66f url(img/app-stack-crappy.jpg) center no-repeat; background-size: 100% auto;"></section>
+    <section style="background: #fff url(img/app-stack.jpg) center no-repeat; background-size: 100% auto;"></section>
+
+    <section class="intro">
+        <h2>Servers</h2>
+    </section>
+    <section class="intro">
+        <h2>A cluster of servers working together</h2>
+    </section>
+    <section style="background: #f66 url(img/linode-then.png) center no-repeat; background-size: 100% auto;"></section>
+    <section style="background: #f66 url(img/linode-now.png) center no-repeat; background-size: 100% auto;"></section>
+    <section style="background: #f66 url(img/server-cluster.jpg) center no-repeat; background-size: 100% auto;"></section>
+
+    <section class="intro altcolour">
+        <h2>Datavis Tech</h2>
+    </section>
+    <section class="intro altcolour">
+        <h2>A lot of small frameworks working together</h2>
+    </section>
+    <section class="intro">
+        <h2>d3</h2>
+        <h3>"Data-Driven Documents"</h3>
+        <h3>(It's an SVG library)</h3>
+    </section>
+    <section>
+        <iframe data-src="http://bl.ocks.org/mbostock/3943967" width="100%" height="100%" wmode="transparent"></iframe>
+    </section>
+    <section>
+        <iframe data-src="http://bl.ocks.org/mbostock/4183330" width="100%" height="100%" wmode="transparent"></iframe>
+    </section>
+    <section class="coloured-slide">
+        <div class="content centered-content" style="display:table">
+          <div class="vertcenter">
+            <div class="subsection">
+                <h2>D3 is good for:</h2>
+                <ol>
+                    <li>Vector graphics</li>
+                    <li>Smooth, simple transitions</li>
+                </ol>
+            </div>
+            <div class="subsection">
+                <h2>D3 is not good for:</h2>
+                <ol>
+                    <li>'Bitmaps' / photographs</li>
+                    <li>Complex or 3D transitions</li>
+                </ol>
+            </div>
+            <div class="subsection">
+                <h2>We used to use D3 for:</h2>
+                <ol>
+                  <li>History / Sentiment graphs</li>
+                  <li>Category Bubbles</li>
+                  <li>Globe v1</li>
+                  <li>Sentiment Barometer</li>
+                </ol>
+            </div>
+            <div class="subsection">
+                <h2>But now we use D3 for:</h2>
+                <ol>
+                  <li>Globe v1</li>
+                  <li>Sentiment Barometer</li>
+                </ol>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="intro altcolour">
+        <h2>WebGL</h2>
+        <h3>OpenGL for the Browser</h3>
+        <h3>(3D stuff)</h3>
+    </section>
+    <section class="altcolour">
+        <iframe data-src="http://dan.nea.me/particlebox/" width="100%" height="100%" wmode="transparent"></iframe>
+    </section>
+    <section class="altcolour">
+        <iframe data-src="http://dan.nea.me/earth/" width="100%" height="100%" wmode="transparent"></iframe>
+    </section>
+    <section class="coloured-slide altcolour">
+        <div class="content centered-content" style="display:table">
+          <div class="vertcenter">
+            <div class="subsection">
+                <h2>WebGL is good for:</h2>
+                <ol>
+                    <li>3D graphics!</li>
+                    <li>Bitmaps</li>
+                    <li>Complex 3D transitions</li>
+                    <li>Performance <sup>*</sup></li>
+                </ol>
+            </div>
+            <div class="subsection">
+                <h2>WebGL is not good for:</h2>
+                <ol>
+                    <li>Graphs</li>
+                    <li>Drawings</li>
+                    <li>Cost <sup>*</sup></li>
+                </ol>
+            </div>
+            <div class="subsection">
+                <h2>We use WebGL for:</h2>
+                <ol>
+                  <li>Globe v2</li>
+                </ol>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="intro">
+        <h2>HTML and CSS!</h2>
+        <h3>Everyone's favourite duo</h3>
+    </section>
+    <section class="intro">
+        <h2>A lot of language features working together</h2>
+    </section>
+    <section class="intro">
+        <h2>Every single Vizia scene uses HTML &amp; CSS</h2>
+        <h3>HTML for structure, CSS for styling</h3>
+    </section>
+    <section class="coloured-slide">
+        <div class="content centered-content" style="display:table">
+          <div class="vertcenter">
+            <div class="subsection">
+                <h2>CSS is good for:</h2>
+                <ol>
+                    <li><em>Very</em> simple datavis</li>
+                    <li>Page layout</li>
+                    <li>Smooth, simple transitions</li>
+                </ol>
+            </div>
+            <div class="subsection">
+                <h2>CSS is not good for:</h2>
+                <ol>
+                    <li>Anything complicated!</li>
+                    <li>Anything complicated!</li>
+                    <li>Anything complicated!</li>
+                </ol>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section style="background: #f66 url(img/css.gif) center no-repeat; background-size: 50% auto;"></section>
+    <section class="coloured-slide">
+        <div class="content centered-content" style="display:table">
+          <div class="vertcenter">
+            <div class="subsection">
+                <h2>We use CSS for:</h2>
+                <ol>
+                    <li>Page layout</li>
+                    <li>Tile layouts</li>
+                    <li>Mentions Viewer</li>
+                    <li>Topics Cloud</li>
+                </ol>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="intro altcolour">
+        <h2>A single request's journey</h2>
+    </section>
+    <section style="background: #fff url(img/render-datavis.jpg) center no-repeat; background-size: 50% auto;"></section>
+
+    <section class="intro">
+        <h2>Vizia Team Culture</h2>
+    </section>
+    <section class="intro">
+        <h2>Trust</h2>
+    </section>
+    <section class="intro">
+        <h2>Ownership</h2>
+    </section>
+    <section class="intro">
+        <h2>Helping each other</h2>
+    </section>
+    <section class="intro">
+        <h2>Respect</h2>
+    </section>
+    <section class="intro">
+        <h2>Specialisation, and Knowledge Sharing</h2>
+    </section>
+    <section class="intro">
+        <h2>Fun!</h2>
+    </section>
+
+    <section class="intro altcolour">
+        <h2>How Vizia Works</h2>
+        <h3>Dan Neame</h3>
+    </section>
+
+
+    <script src="highlight.min.js"></script>
+    <script src="slideshow.js"></script>
+  </body>
+</html>
